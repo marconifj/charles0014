@@ -156,9 +156,15 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Prepended text-->
-
             </fieldset>
+            
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-2 control-label" for="textinput">Observação:</label>
+                <div class="col-md-4">
+                    <textarea name="obs_entrega" class="form-control" rows="5" id="comment " disabled >{{$entrega->obs_entrega}}</textarea>
+                </div>
+            </div>
             <!-- Button (Double) -->
             <div class="form-group">
                 <label class="col-md-2 control-label" for="Cadastrar"></label>
