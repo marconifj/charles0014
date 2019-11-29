@@ -28,6 +28,7 @@
         <table id="example1" class="table table-bordered table-striped">
             <thead>
                 <tr>
+                    <th>Código</th>
                     <th>Nome</th>
                     <th>Celular</th>
                     <th>Veiculo</th>
@@ -40,6 +41,7 @@
                 @foreach($entregadors as $entregador)
             <input type="hidden" name="id" value="{{ $entregador->id }}">
             <tr>
+                <td>{{$entregador->id}}</td>
                 <td>{{$entregador->nome_entregador}}</td>
                 <td>{{$entregador->celular_entregador}}</td>
                 <td>{{$entregador->veiculo_entregador}}</td>

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Entregador extends Model {
 
     public $timestamps = false;
-    protected $fillable = ['nome_entregador', 'cpf_entregador', 'identidade_entregador', 'veiculo_entregador', 'placa_veiculo_entregador', 'email_entregador', 'telefone_entregador', 'celular_entregador'];
+    protected $fillable = ['nome_entregador', 'cpf_entregador', 'identidade_entregador', 'veiculo_entregador', 'placa_veiculo_entregador', 'email_entregador', 'telefone_entregador', 'celular_entregador','obs_entregador'];
 
     public function endereco() {
         return $this->belongsTo('App\Models\Endereco');

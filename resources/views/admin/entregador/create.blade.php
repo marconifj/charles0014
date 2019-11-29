@@ -179,9 +179,7 @@
                     <div class="col-md-4">
                         <textarea name="obs_entregador" class="form-control" rows="5" id="comment "></textarea>
                     </div>
-
                 </div>
-
                 <!-- Button (Double) -->
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="Cadastrar"></label>

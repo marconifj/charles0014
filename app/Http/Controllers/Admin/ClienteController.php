@@ -47,8 +47,9 @@ class ClienteController extends Controller {
         $clientes = DB::table('clientes')
                 ->join('enderecos', 'clientes.id', '=', 'enderecos.id_cliente')
                 ->where('clientes.id', '=', $id)
+                ->select('clientes.id', 'clientes.nome_cliente', 'clientes.tel_cliente', 'clientes.cel_cliente', 'clientes.email_cliente', 'clientes.obs_cliente', 'enderecos.cep_endereco', 'enderecos.rua_endereco', 'enderecos.numero_endereco', 'enderecos.complemento_endereco', 'enderecos.cidade_endereco', 'enderecos.bairro_endereco', 'enderecos.uf_endereco')
                 ->first();
-
+                
         return view('admin.cliente.details', compact('clientes'));
     }
 

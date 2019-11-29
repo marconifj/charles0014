@@ -117,14 +117,14 @@ return [
                     'icon' => 'fas fa-users'
                 ],
                 [
-                    'text' => 'Produto por entrega',
-                    'url' => 'admin/produto',
-                    'icon' => 'fas fa-chart-pie'
-                ],
-                [
                     'text' => 'Entregas',
                     'url' => 'admin/EntregasRelatorios',
                     'icon' => 'fas fa-utensils'
+                ],
+                [
+                    'text' => 'Produto por entrega',
+                    'url' => 'admin/produto',
+                    'icon' => 'fas fa-chart-pie'
                 ]
             ]
         ],

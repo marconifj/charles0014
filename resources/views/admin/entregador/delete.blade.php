@@ -19,7 +19,7 @@
         <div class="col-md-6">
             Nome: {{ $entregadors->nome_entregador}}
             <br> Telefone Fixo: {{ $entregadors->tel_entregador}}
-            <br> Celular: {{ $entregadors->cel_entregador}}
+            <br> Celular: {{ $entregadors->celular_entregador}}
             <br> E-mail: {{ $entregadors->email_entregador}}
             <br>
             <hr> Cep: {{ $endereco->cep_endereco}}
