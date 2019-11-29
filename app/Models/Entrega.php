@@ -28,13 +28,16 @@ class Entrega extends Model {
                         ->join('enderecos', 'clientes.id', '=', 'enderecos.id_cliente')
                         ->join('entregadors', 'entregadors.id', '=', 'entregas.id_entregador')
                         ->join('statuses', 'entregas.id_status', '=', 'statuses.id')
-                        ->select('entregas.codigo_entrega', 'entregas.id', 'entregas.produto_entrega', 'entregas.total_entrega', 'statuses.descricao_status', 'clientes.nome_cliente', 'entregadors.nome_entregador', 'enderecos.bairro_endereco')
+                        ->join('produtos', 'entregas.id_produto', '=', 'produtos.id')
+                        ->select('entregas.codigo_entrega', 'entregas.id', 'produtos.descricao_produto', 'entregas.total_entrega', 'statuses.descricao_status', 'clientes.nome_cliente', 'entregadors.nome_entregador', 'enderecos.bairro_endereco')
                         ->where(function($query) use ($data) {
                             if (isset($data['data'])) {
                                 $query->orwhere('codigo_entrega', 'like', '%' . $data['data'] . '%')
                                 ->orwhere('nome_cliente', 'like', '%' . $data['data'] . '%')
                                 ->orwhere('nome_entregador', 'like', '%' . $data['data'] . '%')
-                                ->orwhere('bairro_endereco', 'like', '%' . $data['data'] . '%');
+                                ->orwhere('bairro_endereco', 'like', '%' . $data['data'] . '%')
+                                ->orwhere('descricao_produto', 'like', '%' . $data['data'] . '%')
+                                ->orwhere('descricao_status', 'like', '%' . $data['data'] . '%');
                             }
                         })
                         ->paginate($this->totalPage);
