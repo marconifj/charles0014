@@ -134,7 +134,7 @@ return [
             'icon' => 'fas fa-users-cog',
         ],
         [
-            'text' => 'Ajuda',
+            'text' => 'Sobre',
             'url' => 'admin/ajuda',
             'icon' => 'far fa-question-circle',
         ]
