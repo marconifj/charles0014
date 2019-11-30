@@ -252,7 +252,6 @@
 
 //Obs esse campo valida se existe produto selecionado, além desabilitar o campo de cadastro para evitar erros. 
                                 function calcularPagamento() {
-                                    debugger;
                                     var totalproduto = document.getElementById('total_entrega').value.replace(/[^0-9,.]*/, '');
                                     var totaldinheiro = document.getElementById('total_dinheiro').value.replace(/[^0-9,.]*/, '');
                                     totalproduto = parseFloat(totalproduto.split('.').join('').split(',').join('.'));
@@ -268,6 +267,7 @@
                                             document.getElementById("total_troco").value = troco.toFixed(2);
                                         } else {
                                             alert('Valor em Dinheiro menor');
+                                            document.getElementById("Cadastrar").disabled = true;
                                         }
                                     } else {
                                         alert('Selecione um produto.');
